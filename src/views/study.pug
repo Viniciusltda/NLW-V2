@@ -1,0 +1,131 @@
+doctype html
+
+html(lang="pt_br")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(name="theme-color" content="#8257E5")
+
+        title Estudar
+
+        link(rel="shortcut icon" href="/images/favicon.png" type="image/png")
+
+        link(rel="stylesheet" href="/Components/index.css")
+        link(rel="stylesheet" href="/Components/header.css")
+        link(rel="stylesheet" href="/Components/forms.css")
+        link(rel="stylesheet" href="/Components/study-styles.css")
+
+        link(href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet")
+
+    body
+        #container
+            header.page-header
+                #top-bar
+                    a(href="/")
+                        img(src="/images/icons/back.svg" alt="Voltar")
+                    
+                    img(src="/images/logo.svg" alt="Proffy")
+
+                #header-content
+                    strong Esses são os Proffys disponíveis.
+
+                    form#search-teachers.forms(action="")
+                        div
+                            label(for="subject") Matérias
+                            select#subject(name="subject")
+                                option(value="") Selecione uma opção
+                                option(value="1") Artes
+                                option(value="2") Biologia
+                                option(value="3") Ciências
+                                option(value="4") Educação Física
+                                option(value="5") Física
+                                option(value="6") Geografia
+                                option(value="7") História
+                                option(value="8") Matemática
+                                option(value="9") Português
+                                option(value="10") Química
+
+                        div
+                            label(for="weekday") Dia da Semana
+                            select#weekday(name="weekday")
+                                option(value="") Selecione uma opção
+                                option(value="1") Domingo
+                                option(value="2") Segunda
+                                option(value="3") Terça
+                                option(value="4") Quarta
+                                option(value="5") Quinta
+                                option(value="6") Sexta
+                                option(value="7") Sábado
+
+                        div
+                            label(for="time") Horários
+                            input#time(name="time" type="time")
+
+                        button(type="submit") Filtrar
+
+            main#content
+                article
+                    header
+                        img(src="https://avatars2.githubusercontent.com/u/2254731?s=460&u=0ba16a79456c2f250e7579cb388fa18c5c2d7d65&v=4" alt="Diegão")
+
+                        div
+                            strong Diego Fernandes
+
+                            span Química
+
+                    p.
+                        Entusiasta pelas melhores técnologias da Química Avançada.
+                        <br><br> 
+                        Apaixonado por explodir coisas em laboratório e por mudar a vida das pessoas através de experiências. Mais de 200mil pessoas já passaram pelas minhas explosões.
+
+                    footer
+                        p Preço/Hora
+                            strong R$20,00
+
+                        button
+                            img(src="/images/icons/whatsapp.svg" alt="Whatsapp")
+                            contato Entrar em Contato
+
+                article
+                    header
+                        img(src="https://avatars2.githubusercontent.com/u/6643122?s=460&u=1e9e1f04b76fb5374e6a041f5e41dce83f3b5d92&v=4" alt="Maykão")
+
+                        div
+                            strong Mayk Brito
+
+                            span Educação Física
+
+                    p.
+                        Instrutor de Educação Física para iniciantes, minha missão de vida é levar saúde e contribuir para o crescimento de quem se interessar.
+                        <br><br>
+                        Comecei a minha jornada profissional em 2001, quando meu pai me deu dois altéres de 32kg com a seguinte condição: "Aprenda a fazer dinheiro com isso!"
+
+                    footer
+                        p Preço/Hora
+                            strong R$40,00
+
+                        button
+                            img(src="/images/icons/whatsapp.svg" alt="Whatsapp")
+                            contato Entrar em Contato
+                        
+                article
+                    header
+                        img(src="https://mir-s3-cdn-cf.behance.net/user/230/4713a37191453.5f14e9ebb5e58.jpg" alt="Tiagão")
+
+                        div
+                            strong Tiago Luchtenberg
+
+                            span Geografia
+
+                    p.
+                        As vezes não sei nem onde eu tô, mas consigo me localizar facilmente em qualquer lugar. Tenho memória fotográfica e nunca fico perdido.
+                        <br><br>
+                        Eu ensino a galera a como não se perder na vida, com lições geográficas simples para você nunca mais precisar de um mapa nessa sua bela vida.
+
+                    footer
+                        p Preço/Hora
+                            strong R$360,00
+
+                        button
+                            img(src="/images/icons/whatsapp.svg" alt="Whatsapp")
+                            contato Entrar em Contato

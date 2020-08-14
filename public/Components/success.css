@@ -1,0 +1,29 @@
+body {
+    background-color: #f0f0f0;
+    background-image: url("/images/success-background.svg");
+
+}
+
+#container { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 18px;
+
+    min-height: 100vh;
+
+}
+
+@media(max-width: 850px){
+    #container {    
+        font-size: 16px;
+    
+    }
+
+    #container img {
+        width: 70px;
+
+    }
+
+}

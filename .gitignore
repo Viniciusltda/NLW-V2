@@ -1,0 +1,9 @@
+# ignoring useless folders
+
+.vscode
+node_modules
+
+# Ignoring Images
+
+layout.PNG
+layout2.PNG

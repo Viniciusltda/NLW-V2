@@ -1,0 +1,20 @@
+* {
+    font-family: 'Poppins', sans-serif;
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+:root {
+    --background: #8257E5;
+    --background-lighter: #9871F5;
+    --background-darker: #6842C2;
+    --background-second: #F0F0F7;
+
+    --primary: #04D361;
+    --primary-dark: #04BF58;
+    
+}

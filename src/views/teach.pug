@@ -1,0 +1,128 @@
+doctype html
+
+html(lang="pt_br")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(name="theme-color" content="#8257E5")
+
+        title Ensinar
+
+        link(rel="shortcut icon" href="/images/favicon.png" type="image/png")
+
+        link(rel="stylesheet" href="/Components/index.css")
+        link(rel="stylesheet" href="/Components/header.css")
+        link(rel="stylesheet" href="/Components/forms.css")
+        link(rel="stylesheet" href="/Components/teach-styles.css")
+
+        link(href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet")
+
+    body
+        #container
+            header.page-header
+                #top-bar
+                    a(href="/")
+                        img(src="/images/icons/back.svg" alt="Voltar")
+                    
+                    img(src="/images/logo.svg" alt="Proffy")
+
+                #header-content
+                    strong Que incrível que você quer dar Aulas!
+
+                    p O primeiro passo é preencher esse formulário de Inscrição.
+
+            main
+                form.forms#make-a-class(action="")
+                    fieldset
+                        legend Seus Dados
+                        
+                        .input-block
+                            label(for="complete-name") Nome Completo
+
+                            input#complete-name(type="text" name="complete-name" required)
+
+                        .input-block
+                            label(for="picture-url") Sua Foto
+                                small (Link começando com https://)
+
+                            input#picture-url(type="url" name="picture-url" required)
+
+                        .input-block
+                            label(for="whatsapp-number") Whatsapp
+                                small (Somente número)
+
+                            input#whatsapp-number(type="text" name="whatsapp-number" required)
+
+                        .input-block
+                            label(for="bio") Biografia
+
+                            textarea#bio(name="bio" placeholder="Conte um pouco da sua História." required)
+
+                    fieldset
+                        legend Sobre a Aula
+
+                        div
+                            label(for="subject") Matérias
+
+                            select#subject(name="subject")
+                                option(value="") Selecione uma opção
+                                option(value="1") Artes
+                                option(value="2") Biologia
+                                option(value="3") Ciências
+                                option(value="4") Educação Física
+                                option(value="5") Física
+                                option(value="6") Geografia
+                                option(value="7") História
+                                option(value="8") Matemática
+                                option(value="9") Português
+                                option(value="10") Química
+
+                        .input-block
+                            label(for="cost") Custo Hora/Aula
+                                small (R$)
+                            
+                            input#cost(name="cost" type="number" required)
+
+                    fieldset#schedule-field
+                        legend Horários Disponíveis
+                            button#add-time(type="button") + Novo Horário
+
+                        #schedule
+                            div
+                                label(for="weekday") Dia da Semana
+
+                                select#weekday(name="weekday[]" required)
+                                    option(value="") Selecione uma opção
+                                    option(value="1") Domingo
+                                    option(value="2") Segunda
+                                    option(value="3") Terça
+                                    option(value="4") Quarta
+                                    option(value="5") Quinta
+                                    option(value="6") Sexta
+                                    option(value="7") Sábado
+
+                            .input-block
+                                label(for="from-time") Das
+                                
+                                input#from-time(name="from-time[]" type="time" required)
+
+                            .input-block
+                                label(for="to-time") Até
+                                
+                                input#to-time(name="to-time[]" type="time" required)
+
+                footer
+                    p
+                        img(src="/images/icons/warning.svg" alt="Aviso")
+                        warn.
+                            Importante!
+                            <br>
+                            Por Favor, preencha todos os campos
+                            <br>
+                            do Formulário corretamente.
+
+                    button(type="submit" form="make-a-class") Salvar Formulário
+
+        script(src="/scripts/duplicate.js")
+
+                            

@@ -1,0 +1,227 @@
+body {
+    background-color: #f0f0f0;
+
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+
+}
+
+#container main {
+    background-color: white;
+
+    width: 100%;
+    max-width: 740px;
+
+    border-radius: 8px;
+
+    margin: -34px auto 34px;
+    padding-top: 64px;
+
+}
+
+#container main fieldset {
+    border: none;
+    
+    padding: 0 24px;
+
+}
+
+.page-header #header-content {
+    margin-bottom: 64px;
+    
+}
+
+.forms label {
+    color: gray;
+
+}
+
+#container #make-a-class fieldset legend {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Archivo', sans-serif;
+
+    color: black;
+
+    margin-bottom: 24px;
+    padding-bottom: 17px;
+
+    width: 100%;
+
+    border-bottom: 2px solid #f0f0f0;
+
+}
+
+#container fieldset+fieldset {
+    margin-top: 64px;
+
+}
+
+#container #make-a-class fieldset legend button {
+    background: none;
+
+    width: initial;
+    height: initial;
+
+    color: var(--background);
+
+    font-size: 16px;
+
+    margin: 0;
+    padding: 0;
+
+    transition: color .3s;
+
+}
+
+#container #make-a-class fieldset legend button:hover {
+    color: var(--background-darker);
+
+}
+
+#container .input-block+.input-block,
+#container .input-block+textarea,
+#container select+.input-block {
+    margin-top: 24px;
+
+}
+
+#make-a-class .input-block textarea {
+    height: 142px;
+
+    padding: 16px 18px; 
+
+    resize: none;
+
+}
+
+main footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: center;
+
+    margin: 34px 0 0;
+    padding: 32px 24px;
+
+    background-color: #f7f7f7;
+    
+    border-top: 2px solid #f0f0f0;
+
+}
+
+main footer p {
+    margin: 0 0 34px;
+
+    display: inherit;
+    flex-direction: column;
+
+    font-size: 15px;
+    line-height: 24px;
+
+    color: rgb(155, 155, 155);
+
+}
+
+main footer button {
+    border: none;
+    border-radius: 8px;
+
+    width: 100%;
+    height: 56px;
+
+    background-color: var(--primary);
+    color: white;
+
+    font-size: 17px;
+    font-weight: bold;
+    font-family: 'Archivo', sans-serif;
+
+    cursor: pointer;
+
+    margin-top: 22px;
+
+    transition: background .3s;
+
+}
+
+main footer button:hover {
+    background-color: var(--primary-dark);
+
+}
+
+#schedule+#schedule {
+    margin-top: 32px;
+
+    padding-top: 32px;
+    
+    border-top: 2px solid #f0f0f0;
+
+}
+
+@media (min-width: 850px) {
+    .page-header #header-content {
+        margin-bottom: 0;
+
+    }
+
+    #make-a-class fieldset {
+        padding: 0 64px;
+
+    }
+
+    #schedule {
+        display: grid;
+
+        grid-template-columns: 2fr 1fr 1fr;
+        column-gap: 16px;
+
+    }
+
+    #schedule select + .input-block, #schedule .input-block + .input-block {
+        margin-top: 0;
+
+    }
+
+    main footer {
+        padding: 40px 64px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    main footer button {
+        margin-top: 0;
+
+        width: 200px;
+
+    }
+
+    main footer p {
+        text-align: left;
+
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 14px;
+
+        margin: 0;
+
+    }
+
+    main footer p img {
+        margin-right: 16px;
+
+    }
+}
