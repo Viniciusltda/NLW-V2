@@ -32,26 +32,26 @@ html(lang="pt_br")
                     p O primeiro passo é preencher esse formulário de Inscrição.
 
             main
-                form.forms#make-a-class(action="")
+                form.forms#make-a-class(action="/teach" method="POST")
                     fieldset
                         legend Seus Dados
                         
                         .input-block
-                            label(for="complete-name") Nome Completo
+                            label(for="complete_name") Nome Completo
 
-                            input#complete-name(type="text" name="complete-name" required)
+                            input#complete-name(type="text" name="complete_name" required)
 
                         .input-block
-                            label(for="picture-url") Sua Foto
+                            label(for="picture_url") Sua Foto
                                 small (Link começando com https://)
 
-                            input#picture-url(type="url" name="picture-url" required)
+                            input#picture-url(type="url" name="picture_url" required)
 
                         .input-block
-                            label(for="whatsapp-number") Whatsapp
+                            label(for="whatsapp_number") Whatsapp
                                 small (Somente número)
 
-                            input#whatsapp-number(type="text" name="whatsapp-number" required)
+                            input#whatsapp-number(type="text" name="whatsapp_number" required)
 
                         .input-block
                             label(for="bio") Biografia
@@ -64,7 +64,7 @@ html(lang="pt_br")
                         div
                             label(for="subject") Matérias
 
-                            select#subject(name="subject")
+                            select#subject(name="subject" required)
                                 option(value="") Selecione uma opção
                                 option(value="1") Artes
                                 option(value="2") Biologia
@@ -91,7 +91,7 @@ html(lang="pt_br")
                             div
                                 label(for="weekday") Dia da Semana
 
-                                select#weekday(name="weekday[]" required)
+                                select#weekday(name="weekday" required)
                                     option(value="") Selecione uma opção
                                     option(value="1") Domingo
                                     option(value="2") Segunda
@@ -102,14 +102,14 @@ html(lang="pt_br")
                                     option(value="7") Sábado
 
                             .input-block
-                                label(for="from-time") Das
+                                label(for="from_time") Das
                                 
-                                input#from-time(name="from-time[]" type="time" required)
+                                input#from-time(name="from_time" type="time" required)
 
                             .input-block
-                                label(for="to-time") Até
+                                label(for="to_time") Até
                                 
-                                input#to-time(name="to-time[]" type="time" required)
+                                input#to-time(name="to_time" type="time" required)
 
                 footer
                     p
