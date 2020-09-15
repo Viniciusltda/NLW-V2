@@ -13,29 +13,56 @@ const db = new sqlite.Database(__dirname + '/teachers.db', sqlite.OPEN_READWRITE
 
 });
 
+
+
 routes.get('/', (req, res) => {
     res.render('index');
 
 });
 
-routes.get('/study', (req, res) => {
+routes.get('/study', (req, res) => {    
     const query = `
         SELECT id, name, picture, whatsapp, biograph, subject, cost 
         FROM tbTeachers
-        ORDER BY id
+        ORDER BY id DESC
         LIMIT 5;
     `;
 
-    db.all(query, (err, success) => {
+    db.all(query, (err, Articles) => {
         if(err){
             console.log(err.message);
             return;
+
         }
 
-        res.render('study', {success});
+        res.render('study', {Articles});
+
     });
+});
 
+routes.get('/study-filtered', (req, res) => {
+    const query2 = `
+    SELECT id, name, picture, whatsapp, biograph, subject, cost, week_day, time_01, time_02
+    FROM tbTeachers
+    WHERE subject = ? AND week_day = ? AND time_01 <= ? AND time_02 >= ?
+    ORDER BY id DESC
+    `;
 
+    const r = req.query;
+    const filtered= {
+        filter: true
+    };
+    
+    db.all(query2, [r.subject, r.weekday, r.time, r.time], (err, Articles) => {
+        if(err){
+            console.log(err.message);
+            return;
+
+        }
+
+        res.render('study', {Articles, filtered});
+
+    });
 });
 
 routes.get('/teach', (req, res) => {

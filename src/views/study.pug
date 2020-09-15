@@ -29,9 +29,9 @@ html(lang="pt_br")
                 #header-content
                     strong Esses são os Proffys disponíveis.
 
-                    form#search-teachers.forms(action="")
+                    form#search-teachers.forms(action="/study-filtered" method="GET")
                         div
-                            label(for="subject") Matérias
+                            label(for="subject") Matéria
                             select#subject(name="subject")
                                 option(value="") Selecione uma opção
                                 option(value="1") Artes
@@ -58,74 +58,35 @@ html(lang="pt_br")
                                 option(value="7") Sábado
 
                         div
-                            label(for="time") Horários
+                            label(for="time") Horário
                             input#time(name="time" type="time")
 
                         button(type="submit") Filtrar
 
             main#content
-                article
-                    header
-                        img(src="https://avatars2.githubusercontent.com/u/2254731?s=460&u=0ba16a79456c2f250e7579cb388fa18c5c2d7d65&v=4" alt="Diegão")
+                - const subjects = ['something is wrong', 'Artes', 'Biologia', 'Ciências', 'Educação Física', 'Física', 'Geografia', 'História', 'Matemática', 'Português', 'Química'];
 
-                        div
-                            strong Diego Fernandes
+                each Article in Articles
 
-                            span Química
+                    article
+                        header
+                            img(src=Article.picture alt=Article.name)
 
-                    p.
-                        Entusiasta pelas melhores técnologias da Química Avançada.
-                        <br><br> 
-                        Apaixonado por explodir coisas em laboratório e por mudar a vida das pessoas através de experiências. Mais de 200mil pessoas já passaram pelas minhas explosões.
+                            div
+                                strong #{Article.name}
 
-                    footer
-                        p Preço/Hora
-                            strong R$20,00
+                                span #{subjects[Article.subject]}
 
-                        button
-                            img(src="/images/icons/whatsapp.svg" alt="Whatsapp")
-                            contato Entrar em Contato
+                        p.
+                            #{Article.biograph}
 
-                article
-                    header
-                        img(src="https://avatars2.githubusercontent.com/u/6643122?s=460&u=1e9e1f04b76fb5374e6a041f5e41dce83f3b5d92&v=4" alt="Maykão")
+                        footer
+                            p Preço/Hora
+                                strong R$#{Article.cost},00
 
-                        div
-                            strong Mayk Brito
+                            button
+                                img(src="/images/icons/whatsapp.svg" alt="Whatsapp")
+                                contato Entrar em Contato
 
-                            span Educação Física
-
-                    p.
-                        Instrutor de Educação Física para iniciantes, minha missão de vida é levar saúde e contribuir para o crescimento de quem se interessar.
-                        <br><br>
-                        Comecei a minha jornada profissional em 2001, quando meu pai me deu dois altéres de 32kg com a seguinte condição: "Aprenda a fazer dinheiro com isso!"
-
-                    footer
-                        p Preço/Hora
-                            strong R$40,00
-
-                        button
-                            img(src="/images/icons/whatsapp.svg" alt="Whatsapp")
-                            contato Entrar em Contato
-                        
-                article
-                    header
-                        img(src="https://mir-s3-cdn-cf.behance.net/user/230/4713a37191453.5f14e9ebb5e58.jpg" alt="Tiagão")
-
-                        div
-                            strong Tiago Luchtenberg
-
-                            span Geografia
-
-                    p.
-                        As vezes não sei nem onde eu tô, mas consigo me localizar facilmente em qualquer lugar. Tenho memória fotográfica e nunca fico perdido.
-                        <br><br>
-                        Eu ensino a galera a como não se perder na vida, com lições geográficas simples para você nunca mais precisar de um mapa nessa sua bela vida.
-
-                    footer
-                        p Preço/Hora
-                            strong R$360,00
-
-                        button
-                            img(src="/images/icons/whatsapp.svg" alt="Whatsapp")
-                            contato Entrar em Contato
+                if filtered
+                    a#cfilter(href="/study") Cancelar Filtro
