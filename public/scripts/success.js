@@ -1,4 +1,4 @@
 setInterval(() => {
-    window.location = '/';
+    window.location = '/study';
 
 }, 5000);

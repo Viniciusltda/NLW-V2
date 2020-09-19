@@ -64,28 +64,6 @@ body {
 
 }
 
-#container #make-a-class fieldset legend button {
-    background: none;
-
-    width: initial;
-    height: initial;
-
-    color: var(--background);
-
-    font-size: 16px;
-
-    margin: 0;
-    padding: 0;
-
-    transition: color .3s;
-
-}
-
-#container #make-a-class fieldset legend button:hover {
-    color: var(--background-darker);
-
-}
-
 #container .input-block+.input-block,
 #container .input-block+textarea,
 #container select+.input-block {
